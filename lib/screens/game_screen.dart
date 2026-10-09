@@ -6,6 +6,7 @@ import '../services/settings_service.dart';
 import '../services/share_kit.dart';
 import '../theme/artisan.dart';
 import '../theme/fill_themes.dart';
+import 'menu_screen.dart';
 import 'rules_screen.dart';
 
 /// Game screen: renders the engine. The engine owns all phases/timers;
@@ -642,6 +643,7 @@ class _GameScreenState extends State<GameScreen>
             settings: settings,
             mode: FillMode.quick,
             difficulty: widget.difficulty,
+            level: 0,
             title: widget.title,
           ),
         ),

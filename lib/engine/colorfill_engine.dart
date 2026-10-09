@@ -268,7 +268,6 @@ class ColorFillEngine extends ChangeNotifier {
   /// (0 = old region, 1+ = distance from the old boundary, -1 = unchanged).
   /// The logical board is updated in place.
   List<List<int>> _applyFlood(List<List<int>> b, int color) {
-    final old = b[0][0];
     final oldRegion = _regionOf(b);
     for (final key in oldRegion) {
       final parts = key.split(',');

@@ -353,7 +353,7 @@ class MenuScreen extends StatelessWidget {
           ? () {
               audio.invalid();
               Navigator.pop(ctx);
-              Navigator.of(context).push(
+              Navigator.of(ctx).push(
                 MaterialPageRoute(
                   builder: (_) =>
                       ProScreen(audio: audio, settings: settings),
