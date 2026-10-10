@@ -57,7 +57,7 @@ class FillSettings extends ChangeNotifier {
   int dailyStreak = 0;
   String lastDaily = ''; // yyyy-MM-dd of last completed daily
   int winsForReview = 0; // wins since last review prompt
-  bool isPro = false;
+  bool isPro = true; // everything unlocked — no Pro version
 
   /// The custom theme built from the user's own colors (Pro feature).
   FillThemeDef get customTheme => FillThemeDef(
