@@ -30,12 +30,10 @@ class _ProScreenState extends State<ProScreen> {
 
   Future<void> _init() async {
     await _store.init();
-    _store.proPurchased.addListener(_onProPurchased);
     _store.lastThanks.addListener(_onThanks);
     if (mounted) setState(() => _loading = false);
   }
 
-  void _onProPurchased() {
     if (_store.proPurchased.value) {
       widget.settings.setPro(true);
       widget.audio.levelWin();
@@ -53,7 +51,6 @@ class _ProScreenState extends State<ProScreen> {
 
   @override
   void dispose() {
-    _store.proPurchased.removeListener(_onProPurchased);
     _store.lastThanks.removeListener(_onThanks);
     _store.dispose();
     super.dispose();
