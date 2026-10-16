@@ -3,6 +3,7 @@ import '../services/audio_service.dart';
 import '../services/settings_service.dart';
 import '../theme/artisan.dart';
 import '../theme/fill_themes.dart';
+import '../transfer/transfer_ui.dart';
 
 /// Settings: renameable player profile, music/SFX toggles + volume,
 /// progress reset, credits.
@@ -80,6 +81,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: ListView(
               padding: const EdgeInsets.fromLTRB(24, 16, 24, 32),
               children: [
+              TransferSaveTile(gameSlug: 'colorfill'),
                 Text('PLAYER', style: Artisan.label(12, theme: theme)),
                 const SizedBox(height: 8),
                 TextField(
